@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>마인포</h1>
-</body>
-</html>
+{% extends 'layout/base.html' %}
+
+{% block title %} Semi Project v1-Django :INDEX {% endblock %}
+
+{% block style %}
+        form label { display: inline-block; width: 200px;
+                    text-align: right;
+                    font-weight: bold; }
+        table { border: none;
+                margin: 120px auto; }
+        th, td { padding: 7px; } /* 패딩 안 먹음*/
+        th { text-align: right; }
+{% endblock %}
+
+{% block content %}
+
+ <h2>회원정보</h2>
+        <div>
+        <table>
+            <tr><th>아이디</th><td>nakamotoryo</td></tr>
+            <tr><th>이름</th><td>나카모토</td></tr>
+            <tr><th>이메일</th><td>ryo@naver.com</td></tr>
+            <tr><th>가입일</th><td>2022-05-27 12:18:23</td></tr>
+        </table>
+        </div>
+
+{% endblock %}
+
+{% block jscript %}{% endblock %}

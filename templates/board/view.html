@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Python 웹프로젝트 v1</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/webproject.css">
-    <style>
+{% extends 'layout/base.html' %}
+
+{% block title %} Semi Project v1-Django :VIEW {% endblock %}
+{% block style %}
 
         table {
             width: 90%;
-            margin: 20px auto; /* 테이블 위치 조정 */
+            margin: 20px auto;
             border-collapse: collapse;
             table-layout: fixed;
             margin-bottom: 50px;
@@ -18,7 +14,7 @@
         th, td {
             padding: 8px;
             border: none;
-            line-height: 180%; /* 줄간격 */
+            line-height: 180%;
         }
 
         th:first-child { width: 15% }
@@ -26,32 +22,14 @@
         tr:nth-child(4) td { border: 1px solid orange; }
         tr:last-child { text-align: right; }
         tr:last-child td { padding-right: 0 }
-        tr:nth-child(4) div { height: 300px; overflow: auto; padding: 5px } /* 글상자 고정하고 스크롤 */
+        tr:nth-child(4) div { height: 300px; overflow: auto; padding: 5px }
 
         label {
-           /* display: inline-block; */
             text-align: justify;
         }
-    </style>
-</head>
-<body>
-<div id="wrap">
-    <header>
-        <h1>Python 웹프로젝트 v1</h1>
-        <div id="menu">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="join.html">회원가입</a></li>
-                <li><a href="login.html">로그인</a></li>
-                <li><a href="board.html">게시판</a></li>
-                <li><a href="myinfo.html">회원정보</a></li>
-            </ul>
-        </nav>
-        </div>
-        <hr>
-    </header>
-    <div id="main">
+{% endblock %}
+
+{% block content %}
         <h2>게시판 본문글</h2>
         <table>
             <tr><th>제목</th><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구!</td></tr>
@@ -65,13 +43,4 @@
             <tr><td colspan="2"><button type="button" onclick="location.href='board.html'">목록으로이동</button> <button type="button" onclick="location.href='write.html'">새글쓰기</button>
                 <button type="button">수정하기</button> <button type="button">삭제하기</button></td></tr>
         </table>
-    </div>
-    <footer>
-        <hr>
-        <div id="copy">
-            <span>copyright &copy; 2022 ytty. All Right Reserved.</span>
-        </div>
-    </footer>
-</div>
-</body>
-</html>
+{% endblock %}

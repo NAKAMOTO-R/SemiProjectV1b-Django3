@@ -1,10 +1,160 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>리스트</h1>
-</body>
-</html>
+{% extends 'layout/base.html' %}
+
+{% block title %} Semi Project v1-Django :BOARD {% endblock %}
+{% block style %}
+    #board {
+            border: none;
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 90%;
+            table-layout: fixed;
+        }
+
+        #board a:hover { color: crimson; }
+        #board a:active { color: gold; }
+
+        #board th, td {
+            border: 1px solid grey;
+            padding: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #board #new {
+            text-align: left;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            padding-left: 0;
+        }
+
+        #board td:first-child   { text-align: center;}
+        #board td:nth-child(3)  { text-align: center;}
+        #board td:nth-child(4)  { text-align: center;}
+        #board td:last-child    { text-align: center;}
+
+        #pgnav li { margin-left: 2px }
+        #pgnav {
+            text-align: center;
+        }
+
+        .cpage { font-weight: bold; font-size: 16px; color: red }
+
+{% endblock %}
+
+
+{% block content %}
+    <h2>게시판</h2>
+        <table id="board">
+            <tr>
+                <td colspan="5" id="new"><button type="button" onclick="location.href='write.html'">새글쓰기</button></a></td>
+            </tr>
+            <colgroup>
+                <col style="width: 7%">
+                <col style="width: auto">
+                <col style="width: 15%">
+                <col style="width: 15%">
+                <col style="width: 10%">
+            </colgroup>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td><a href="view.html?bno=1">시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구!</a></td>
+                <td>tytrackmottomotto</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+           <tr>
+                <td>6</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구! 정말이라구, 친구! 시간은 금이라구, 친구</td>
+                <td>nakanaka</td>
+                <td>2022-05-27</td>
+                <td>127</td>
+            </tr>
+
+
+        </table>
+        <ul id="pgnav">
+            <li>이전</li>
+            <li class="cpage">1</li><li>2</li>
+            <li>3</li><li>4</li>
+            <li>5</li><li>6</li>
+            <li>7</li><li>8</li>
+            <li>9</li><li>10</li>
+            <li>다음</li>
+        </ul>
+
+{% endblock %}
+
+{% block jscript %}{% endblock %}
