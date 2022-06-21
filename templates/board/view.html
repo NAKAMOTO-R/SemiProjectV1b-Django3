@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Python 웹프로젝트 v1</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/webproject.css">
+    <style>
+
+        table {
+            width: 90%;
+            margin: 20px auto; /* 테이블 위치 조정 */
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-bottom: 50px;
+        }
+
+        th, td {
+            padding: 8px;
+            border: none;
+            line-height: 180%; /* 줄간격 */
+        }
+
+        th:first-child { width: 15% }
+        tr:nth-child(4) th { vertical-align: top }
+        tr:nth-child(4) td { border: 1px solid orange; }
+        tr:last-child { text-align: right; }
+        tr:last-child td { padding-right: 0 }
+        tr:nth-child(4) div { height: 300px; overflow: auto; padding: 5px } /* 글상자 고정하고 스크롤 */
+
+        label {
+           /* display: inline-block; */
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header>
+        <h1>Python 웹프로젝트 v1</h1>
+        <div id="menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="board.html">게시판</a></li>
+                <li><a href="myinfo.html">회원정보</a></li>
+            </ul>
+        </nav>
+        </div>
+        <hr>
+    </header>
+    <div id="main">
+        <h2>게시판 본문글</h2>
+        <table>
+            <tr><th>제목</th><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말이라구, 친구!</td></tr>
+            <tr><th>작성자</th><td>nakanaka</td></tr>
+            <tr><th>작성일</th><td>2022-05-27 12:45:05 (127)</td></tr>
+            <tr><th>본문</th><td><div class="a">호러 영화로 나온다고 알려졌으나 완전한 호러 영화로 나올 것인지, 아니면 부분적으로 호러적인 요소를 차용하는 정도에 그칠 것인지에 대한 현재 의견이 분분한 상태인데, 일단 티저 예고편만 놓고보면 일반적인 호러 영화와는 거리가 있으나[8][9] 분위기 자체는 전작과 비교하면 매우 어둡고 음산한 느낌이고 점프스케어도 다수 등장한다.. 사실 샘 레이미 감독은 이미 예전부터 이블 데드 시리즈[10] 를 비롯한 호러 영화들의 감독을 맡아온 전적이 있기에 의외라고 할 것도 없거니와, 스파이더맨 2 속 닥터 옥토퍼스 수술씬에서 히어로 무비답지 않은 호러틱한 연출을 선보인 바가 있다. 그리고 뚜껑을 열어보니 거의 이블 데드 2 급으로 호러 영화 연출이 많이 나왔다.[11] 청소년 이상의 관람객에겐 딱히 호러라고 할 정도의 수위가 아니긴 하지만 아동 입장에선 점프스케어나 잔인한 연출이 있어 공포감을 느낄 수 있다.
+티저 영상과 포스터, 완구 등으로 보면 다른 멀티버스의 닥터 스트레인지도 등장한다. 예고편에서는 다른 멀티버스의 인물로 추정되는 어두운 분위기의 닥터 스트레인지가 등장했고 완구로 디펜더스 소속의 닥터 스트레인지, 통칭 '디펜더 스트레인지'가 유출되었다. 티저 영상에서 마블 로고가 뜨기 전, 누군가 미지의 공간에 빨려 들어가는 장면에 등장하는 인물이 디펜더 스트레인지로 추정[12]되고 있다.
+2월 14일, 슈퍼볼에 맞춰서 티저 예고편이 공개되었다. 상단의 영상 외에도 슈퍼볼 TV 스팟에서만 추가된 장면들도 있다.
+프로페서 X와 캡틴 마블인 마리아 램보 혹은 슈퍼리어 아이언맨으로 추정되는 인물이 등장한다.
+                이전작들과 달리 닥터가 아가모토의 눈을 착용하는 위치가 만화처럼 망토 사이 부착되었으며 공중부양 망토의 뒤쪽에도 푸른색 방패문양이 생겼다.</div></td></tr>
+            <tr><td colspan="2"><button type="button" onclick="location.href='board.html'">목록으로이동</button> <button type="button" onclick="location.href='write.html'">새글쓰기</button>
+                <button type="button">수정하기</button> <button type="button">삭제하기</button></td></tr>
+        </table>
+    </div>
+    <footer>
+        <hr>
+        <div id="copy">
+            <span>copyright &copy; 2022 ytty. All Right Reserved.</span>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

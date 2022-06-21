@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Python 웹프로젝트 v1</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/webproject.css">
+    <style>
+        form div {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        form {
+            width: 60%;  /* 가로 길이 지정을 해야 좌우여백 auto가 먹음, %로 지정해야됨 */
+            margin: 65px auto 10px;
+          /*  border: 1px solid red; */
+        }
+
+        /* #write {
+            border: 1px solid red;
+            margin: 20px;
+        } */
+        span { padding-left: 5px; }
+
+        form label {
+            display: inline-block;
+            width: 70px;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .up {
+            vertical-align: top;
+            margin-top: 5px;
+        }
+
+        /*  form label:nth-child(3) { vertical-align: top } 높이가 없어서 세로정렬 안 먹힘힘 */
+
+
+   </style>
+</head>
+<body>
+<div id="wrap">
+    <header>
+        <h1>Python 웹프로젝트 v1</h1>
+        <div id="menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="board.html">게시판</a></li>
+                <li><a href="myinfo.html">회원정보</a></li>
+            </ul>
+        </nav>
+        </div>
+        <hr>
+    </header>
+    <div id="main">
+        <h2>게시판 새글쓰기</h2>
+        <div id="write">
+            <form name="boardfrm" method="post" action="board.do">
+                <div><label for="title">제목</label> <input type="text" name="title" id="title"></div>
+                <div><label for="writer">작성자</label><span>nakanaka</span></div>
+                <div><label for="contents" class="up">본문</label>
+                <textarea name="contents" id="contents" rows="10" cols="50" style="resize: none"></textarea>
+                </div>
+                <div><label></label>
+                    <button type="button">입력완료</button> <button type="button">다시입력</button></div>
+                </form>
+        </div>
+    </div>
+    <footer>
+        <hr>
+        <div id="copy">
+            <span>copyright &copy; 2022 ytty. All Right Reserved.</span>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
