@@ -7,7 +7,7 @@ from django.db import models
 class Member(models.Model):
     id=models.AutoField(primary_key=True)
     userid=models.CharField(max_length=18, unique=True)
-    passwd=models.CharField(max_length=18) #유니크 아님
+    pwd=models.CharField(max_length=18) #유니크 아님
     name=models.CharField(max_length=5)
     email=models.CharField(max_length=100)
     regdate=models.DateTimeField(default=datetime.now)
