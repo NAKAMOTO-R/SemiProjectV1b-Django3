@@ -13,14 +13,27 @@
 {% endblock %}
 
 {% block content %}
+{% if not request.session.userid %}
+    <script>
+        alert('로그인 해주세요');
+        location.href = '/login';</script>
+{% endif %}
 
  <h2>회원정보</h2>
         <div>
         <table>
-            <tr><th>아이디</th><td>nakamotoryo</td></tr>
-            <tr><th>이름</th><td>나카모토</td></tr>
-            <tr><th>이메일</th><td>ryo@naver.com</td></tr>
-            <tr><th>가입일</th><td>2022-05-27 12:18:23</td></tr>
+            <tr><th>아이디</th>
+                <td>{{ member.userid }}</td>
+            </tr>
+            <tr><th>이름</th>
+                <td>{{ member.name }}</td>
+            </tr>
+            <tr><th>이메일</th>
+                <td>{{ member.email }}</td>
+            </tr>
+            <tr><th>가입일</th>
+                <td>{{ member.regdate }}</td>
+            </tr>
         </table>
         </div>
 
