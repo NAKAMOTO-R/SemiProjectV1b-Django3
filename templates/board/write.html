@@ -38,7 +38,30 @@
                 <textarea name="contents" id="contents" rows="10" cols="50" style="resize: none"></textarea>
                 </div>
                 <div><label></label>
-                    <button type="button">입력완료</button> <button type="button">다시입력</button></div>
+                    <button type="button" id="boardbtn">입력완료</button>
+                    <button type="button" >다시입력</button></div>
+                <input type="hidden" name="userid" value="nakanaka"> <!-- form범위내에 숨겨서 넣으면 서버에 전송됨-->
                 </form>
         </div>
+{% endblock %}
+
+{% block jscript %}
+    <script>
+    const boardbtn = document.querySelector('#boardbtn')
+    boardbtn.addEventListener('click', () => {
+        const title = document.boardfrm.title;
+        const contents = document.boardfrm.contents;
+        if (title.value == '') {
+            alert('제목이 없다');
+            title.focus();
+            return;
+        } else if (contents.value == '') {
+            alert('내용이 없다');
+            contents.focus();
+            return;
+        } else {
+            document.boardfrm.submit();
+        }
+    });
+    </script>
 {% endblock %}
