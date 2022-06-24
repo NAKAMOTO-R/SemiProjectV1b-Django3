@@ -32,6 +32,7 @@
         <h2>게시판 새글쓰기</h2>
         <div id="write">
             <form name="boardfrm" method="post">
+                {% csrf_token %}
                 <div><label for="title">제목</label> <input type="text" name="title" id="title"></div>
                 <div><label for="writer">작성자</label><span>nakanaka</span></div>
                 <div><label for="contents" class="up">본문</label>
@@ -40,7 +41,7 @@
                 <div><label></label>
                     <button type="button" id="boardbtn">입력완료</button>
                     <button type="button" >다시입력</button></div>
-                <input type="hidden" name="userid" value="nakanaka"> <!-- form범위내에 숨겨서 넣으면 서버에 전송됨-->
+                <input type="hidden" name="userid" value="{{ request.session.userid_id }}"> <!-- form범위내에 숨겨서 넣으면 서버에 전송됨-->
                 </form>
         </div>
 {% endblock %}
