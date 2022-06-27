@@ -6,8 +6,8 @@ nav { font-weight: bold }
 header h1 { margin-bottom: 20px }
 ul { list-style: none; padding: 0 }
 ul li { display: inline-block; margin-left: 40px; margin-right: 40px }
-a:link { color: black; text-decoration: none }
-a:visited { color: black; text-decoration: none }
-a:hover { color: #bbe309; text-decoration: underline }
-a:active { color: #bbe309; text-decoration: underline }
+box:link { color: black; text-decoration: none }
+box:visited { color: black; text-decoration: none }
+box:hover { color: #bbe309; text-decoration: underline }
+box:active { color: #bbe309; text-decoration: underline }
 #copy { text-align: center; font-size: 14px }
