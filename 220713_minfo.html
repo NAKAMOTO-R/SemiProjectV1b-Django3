@@ -1,9 +1,8 @@
-<p><h5>장르 :
+        <p><h5>장르 :
         {% for g in gr %}
         {% if forloop.last %}
-        {{ g.genre }}
+        {{ g.genre__name }}
         {% else %}
-        {{ g.genre }},
+        {{ g.genre__name }},
         {% endif %}
-        {% endfor %}
-</h5></p>
+        {% endfor %}</h5></p>
