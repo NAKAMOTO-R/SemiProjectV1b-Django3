@@ -1,1 +1,9 @@
-
+<p><h5>장르 :
+        {% for g in gr %}
+        {% if forloop.last %}
+        {{ g.genre }}
+        {% else %}
+        {{ g.genre }},
+        {% endif %}
+        {% endfor %}
+</h5></p>
