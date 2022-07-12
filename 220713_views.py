@@ -26,8 +26,7 @@ class MinfoView(View):
         # from movies_movie as mm, movies_movie_genres as mmg, movies_genre as mg
         # where mm.id = mmg.movie_id and mmg.genre_id = mg.id;
         
-        gr = Movie_genres.objects.filter(movie__id=movie_pk)
-        # print(gr)
+        gr = Movie_genres.objects.filter(movie__id=movie_pk).values('genre__name')
 
         context = {
             'movie': movie,
