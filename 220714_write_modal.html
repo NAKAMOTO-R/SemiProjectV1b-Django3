@@ -1,0 +1,43 @@
+
+<div id="fmmodal" aria-hidden="true" class="modal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background: #2B2B37; ">
+            <div class="modal-body">
+                <div class="d-flex justify-content-end">
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-dark" style="background: #2B2B37; border: none"><i class="bi bi-x fs-4"></i></button>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <form name="mtfrm">
+
+                        <div class="row">
+                            <div class="col-sm-12 text-center fs-5" style="color: #bbe309; ">영화제목을 입력하신 후, [검색하기] 버튼을 클릭하세요</div>
+                        </div>
+
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-8">
+                                <input type="text" id="movie_title" name="movie_title" class="form-control">
+                            </div>
+                            <div class="col-sm-3">
+                                <button type="button" class="btn border-light text-light" id="fmbtn" style="background: #2B2B37"><i class="bi bi-search"></i> 검색하기</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10 ms-3">
+                                <hr style="border: 0">
+                                <select id="movielist" name="movielist" size="10" class="form-select ms-5">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 mb-5 text-center">
+                            <button type="button" id="sendbtn" class="btn fw-bold col-sm-8" style="background: #bbe309; border: #bbe309;" >선택하고 닫기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
